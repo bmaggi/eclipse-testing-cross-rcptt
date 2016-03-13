@@ -1,0 +1,18 @@
+target "Eclipse Testing" with source requirements
+
+location "http://download.eclipse.org/releases/mars/" eclipse-mars {
+ org.eclipse.platform.feature.group
+ org.eclipse.rcp.feature.group
+ org.eclipse.jdt.feature.group
+ org.eclipse.equinox.p2.discovery.feature.feature.group
+ org.eclipse.equinox.executable.feature.group
+}
+
+location "http://download.eclipse.org/modeling/mdt/papyrus/components/sysml14/" eclipse-mars-papyrus-sysml14 {
+ org.eclipse.papyrus.sysml14.feature.feature.group
+}
+
+location "http://download.eclipse.org/papyrus-rt/updates/releases/mars" eclipse-mars-papyrus-rt {
+	org.eclipse.papyrusrt.umlrt.tooling.feature.feature.jar
+}
+

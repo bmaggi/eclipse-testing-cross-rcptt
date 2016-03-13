@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.bmaggi.eclipse.testing</groupId>
+		<artifactId>com.github.bmaggi.eclipse.testing</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.github.bmaggi.eclipse.testing.rcptt</artifactId>
+	<packaging>rcpttTest</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.papyrus.sysml</groupId>
+			<artifactId>org.eclipse.papyrus.sysml14.rcptt.tests</artifactId>
+			<type>rcpttTest</type>
+			<version>0.8.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.papyrusrt</groupId>
+			<artifactId>org.eclipse.papyrusrt.rcptt.tests</artifactId>
+			<type>rcpttTest</type>
+			<version>0.7.2-SNAPSHOT</version>
+		</dependency>		
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>unpack-papyrus-sysml14-rcptt</id>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeArtifactIds>org.eclipse.papyrus.sysml14.rcptt.tests</includeArtifactIds>
+							<outputDirectory>${project.build.directory}/org.eclipse.papyrus.sysml14.rcptt.tests</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.rcptt</groupId>
+				<artifactId>rcptt-maven-plugin</artifactId>
+				<version>2.0.1</version>
+				<extensions>true</extensions>
+				<configuration>
+					<runner>
+						<vmArgs>
+							<vmArg>-Xmx1024m</vmArg>
+							<vmArg>-XX:MaxPermSize=512m</vmArg>
+						</vmArgs>
+					</runner>
+
+					<aut>
+						<explicit>../com.github.bmaggi.eclipse.testing.product/target/products/com.github.bmaggi.eclipse.testing.product-[platform].zip</explicit>
+					</aut>
+					<projects>
+						<project>
+							${project.build.directory}/org.eclipse.papyrus.sysml14.rcptt.tests
+						</project>
+					</projects>
+					<testOptions>
+						<execTimeout>900</execTimeout>
+						<testExecTimeout>1800</testExecTimeout>
+					</testOptions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
