@@ -9,7 +9,7 @@ location "http://download.eclipse.org/releases/mars/" eclipse-mars {
 }
 
 location "http://download.eclipse.org/modeling/mdt/papyrus/components/sysml14/0.8.0_papyrus-sysml-mars_190" eclipse-mars-papyrus-sysml14 {
- org.eclipse.papyrus.sysml14.feature.feature.group
+ org.eclipse.papyrus.sysml14.feature.feature.group [0.8.0,0.8.1)
 }
 
 location "http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/mars" eclipse-mars-papyrus {
@@ -18,6 +18,6 @@ location "http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/mars
 
 
 location "http://download.eclipse.org/papyrus-rt/updates/releases/mars" eclipse-mars-papyrus-rt {
-	org.eclipse.papyrusrt.umlrt.tooling.feature.feature.jar
+	org.eclipse.papyrusrt.umlrt.tooling.feature.feature.jar [0.7.1,0.7.2)
 }
 

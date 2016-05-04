@@ -15,6 +15,12 @@ License [![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://
 mvn clean install
 ```
 
+Optionnal to avoid some tycho mixture
+```
+mvn clean install -Dtycho.localArtifacts=ignore
+```
+
+
 ## Project structure:
  - com.github.bmaggi.eclipse.testing.product : package SysML 1.4 and Papyrus-Rt in an eclipse product
  - com.github.bmaggi.eclipse.testing.rcptt : module that execute SysML 1.4 and Papyrus-Rt RcPTT tests  

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Eclipse Testing" sequenceNumber="1459944519">
+<target name="Eclipse Testing" sequenceNumber="1462361712">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.platform.feature.group" version="4.5.2.v20160212-1500"/>
@@ -20,7 +20,7 @@
       <repository id="eclipse-mars-papyrus" location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/mars"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.papyrusrt.umlrt.tooling.feature.feature.jar" version="0.7.2.201512141602"/>
+      <unit id="org.eclipse.papyrusrt.umlrt.tooling.feature.feature.jar" version="0.7.1.201510122007"/>
       <repository id="eclipse-mars-papyrus-rt" location="http://download.eclipse.org/papyrus-rt/updates/releases/mars"/>
     </location>
   </locations>
