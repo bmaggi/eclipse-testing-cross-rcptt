@@ -17,10 +17,12 @@ mvn clean install
 
 Optionnal to avoid some tycho mixture
 ```
-mvn clean install -Dtycho.localArtifacts=ignore
+ -Dtycho.localArtifacts=ignore 
 ```
-
-
+or
+```
+-Dtycho.disableP2Mirrors=true
+```
 ## Project structure:
  - com.github.bmaggi.eclipse.testing.product : package SysML 1.4 and Papyrus-Rt in an eclipse product
  - com.github.bmaggi.eclipse.testing.rcptt : module that execute SysML 1.4 and Papyrus-Rt RcPTT tests  
